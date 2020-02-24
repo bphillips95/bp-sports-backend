@@ -8,4 +8,6 @@ class WritersController < ApplicationController
         writer = Writer.find(params[:id])
         render json: writer
     end 
+    def create 
+    end
 end
