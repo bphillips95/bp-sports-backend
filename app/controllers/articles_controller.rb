@@ -9,6 +9,11 @@ class ArticlesController < ApplicationController
         render json: article
     end 
     def create 
-
+        article = Article.create(article_params)
+        render json: article
     end
+    private
+    def article_params
+        params.require(:article).permit(:title, :content, :writer)
+      end
 end
