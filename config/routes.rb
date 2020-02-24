@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :users, only: [:create, :index]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
+      get '/persist', to: "users#persist"
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
     # skip_before_action :authorized, only: [:create, :index]
-     
+    before_action :authorized, only: [:persist]
     def profile
         render json: { user: UserSerializer.new(current_user) }, status: :accepted
     end
@@ -20,6 +20,12 @@ class Api::V1::UsersController < ApplicationController
         render json: { error: 'failed to create user' }, status: :not_acceptable
       end
     end
+
+    def persist
+        # byebug
+        wristband = encode_token({user_id: @user.id})
+        render json: {user: UserSerializer.new(@user), token: wristband}
+      end
    
     private
    
