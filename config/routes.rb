@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :article_tags
+  resources :tags
   resources :articles
   resources :writers
   namespace :api do
