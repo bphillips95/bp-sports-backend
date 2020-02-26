@@ -5,8 +5,8 @@ class ArticleSerializer < ActiveModel::Serializer
   def article_tags 
     self.object.article_tags.map do |article_tag| 
       {
-        tag_name: article_tag.tag.name,
-        tag_id: article_tag.tag.id
+        name: article_tag.tag.name,
+        id: article_tag.tag.id
         }
     end 
   end

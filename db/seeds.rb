@@ -5,10 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+ArticleTag.destroy_all
 Article.destroy_all 
 User.destroy_all
 Tag.destroy_all
-ArticleTag.destroy_all
 
 
 user1 = User.create(username: "bp95", password_digest: 123, first_name: "Baruch", last_name: "Phillips", writer: true)
