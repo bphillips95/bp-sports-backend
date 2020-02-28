@@ -1,5 +1,5 @@
 class TagSerializer < ActiveModel::Serializer
-  attributes :id, :name, :articles
+  attributes :id, :city, :name, :articles
   def articles 
     self.object.article_tags.map do |article_tag|
       {

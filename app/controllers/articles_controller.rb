@@ -10,6 +10,8 @@ class ArticlesController < ApplicationController
     end 
     def create 
         article = Article.create(article_params)
+        id = article.id
+        article_tag = ArticleTag.create(tag_id: params[:tag_id], article_id: id)
         render json: article
     end
 
@@ -21,11 +23,15 @@ class ArticlesController < ApplicationController
     
     def destroy 
         article = Article.find(params[:id])
+        article.article_tags.destroy_all
         article.destroy
     end 
 
     private
     def article_params
         params.require(:article).permit(:title, :content, :user_id)
+      end
+      def article_tag_params
+        params.require(:article_tag).permit(:tag_id, :article_id)
       end
 end
