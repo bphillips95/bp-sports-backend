@@ -10,12 +10,6 @@ Article.destroy_all
 User.destroy_all
 Tag.destroy_all
 
-
-user1 = User.create(username: "bp95", password_digest: 123, first_name: "Baruch", last_name: "Phillips", writer: true)
-article1 = Article.create(title: "Mookie Trade", content: "Sucks", user: user1)
-article2 = Article.create(title: "Lester Trade", content: "Also Sucks", user: user1)
-article3 = Article.create(title: "Gerrit Cole signing", content: "Yikes", user: user1)
-
 tag1 = Tag.create(city: "Atanta",name: "Braves")
 tag2 = Tag.create(city: "Miami",name: "Marlins")
 tag3 = Tag.create(city: "New York",name: "Mets")
@@ -51,5 +45,3 @@ tag27 = Tag.create(city: "Los Angeles",name: "Angels")
 tag28 = Tag.create(city: "Oakland",name: "Athletics")
 tag29 = Tag.create(city: "Seattle",name: "Mariners")
 tag30 = Tag.create(city: "Texas",name: "Rangers")
-
-articleTag1 = ArticleTag.create(tag: tag2, article: article1)
