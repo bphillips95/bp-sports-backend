@@ -70,6 +70,7 @@ GEM
       activesupport
     concurrent-ruby (1.1.6)
     crass (1.0.6)
+    dotenv (2.7.5)
     erubi (1.9.0)
     faker (2.10.2)
       i18n (>= 1.6, < 2)
@@ -150,6 +151,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stripe (5.17.0)
     thor (1.0.1)
     thread_safe (0.3.6)
     tzinfo (1.2.6)
@@ -167,6 +169,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug
+  dotenv
   faker (~> 2.10)
   jwt (~> 2.2)
   listen (>= 3.0.5, < 3.2)
@@ -176,6 +179,7 @@ DEPENDENCIES
   rails (~> 6.0.2, >= 6.0.2.1)
   spring
   spring-watcher-listen (~> 2.0.0)
+  stripe
   tzinfo-data
 
 RUBY VERSION

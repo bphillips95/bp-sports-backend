@@ -48,3 +48,6 @@ gem 'active_model_serializers'
 gem "jwt", "~> 2.2"
 
 gem "faker", "~> 2.10"
+
+gem 'stripe' 
+gem 'dotenv'

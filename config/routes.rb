@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :tags
   resources :articles
   resources :writers
+  post '/charges', to: 'charges#create'
   namespace :api do
     namespace :v1 do
       resources :users, only: [:create, :index]
