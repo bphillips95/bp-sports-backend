@@ -26,6 +26,12 @@ class Api::V1::UsersController < ApplicationController
       end
     end
 
+    def update 
+      user = User.find(params[:id])
+      user.update(user_params)
+      render json: user
+  end 
+
     def persist
         # byebug
         wristband = encode_token({user_id: @user.id})
