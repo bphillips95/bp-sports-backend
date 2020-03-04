@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post '/charges', to: 'charges#create'
   namespace :api do
     namespace :v1 do
-      resources :users, only: [:create, :index, :show]
+      resources :users, only: [:create, :index, :show, :update]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
       get '/persist', to: "users#persist"
